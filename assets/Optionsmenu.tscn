@@ -1,0 +1,296 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://icons/introtexture.jpg" type="Texture" id=1]
+[ext_resource path="res://fonts/IndieFlower-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://music/338082__garuda1982__acoustic-guitar-melody.ogg" type="AudioStream" id=3]
+[ext_resource path="res://scripts/music_volume.gd" type="Script" id=4]
+[ext_resource path="res://scripts/sound_volume.gd" type="Script" id=5]
+[ext_resource path="res://scripts/Back_button.gd" type="Script" id=6]
+[ext_resource path="res://scripts/graphic_quality.gd" type="Script" id=7]
+[ext_resource path="res://scripts/AI_activator.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 2 )
+
+[node name="OptionsMenu" type="Control"]
+margin_right = 1280.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0.160784, 0.105882, 0.105882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_top = -1.43201
+margin_right = 1360.0
+margin_bottom = 904.568
+rect_scale = Vector2( 1.04, 1 )
+texture = ExtResource( 1 )
+
+[node name="music_volume" type="Label" parent="."]
+margin_left = 58.5119
+margin_top = 208.835
+margin_right = 456.512
+margin_bottom = 328.835
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.847059, 0.796078, 0.796078, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+text = "Music Volume"
+align = 1
+valign = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider" type="HSlider" parent="music_volume"]
+margin_left = 479.958
+margin_top = 5.27426
+margin_right = 679.958
+margin_bottom = 55.2743
+rect_scale = Vector2( 1.45676, 2.20689 )
+size_flags_horizontal = 3
+min_value = -50.0
+max_value = 6.0
+step = 3.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AI_activator" type="Label" parent="."]
+margin_left = 53.7286
+margin_top = 46.2018
+margin_right = 451.728
+margin_bottom = 166.202
+rect_scale = Vector2( 1, 0.81033 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.847059, 0.796078, 0.796078, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+text = "Artificial
+Intelligence"
+align = 1
+valign = 1
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="AI_activator"]
+margin_left = 484.168
+margin_top = 38.4118
+margin_right = 524.168
+margin_bottom = 78.4118
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="AI_activator/ColorRect"]
+margin_left = -7.92462
+margin_top = -5.45538
+margin_right = 16.0754
+margin_bottom = 18.5446
+rect_scale = Vector2( 2.08, 2.00326 )
+custom_colors/font_color_hover_pressed = Color( 0.819608, 0.776471, 0.776471, 1 )
+custom_colors/font_color = Color( 0.929412, 0.854902, 0.854902, 1 )
+custom_colors/font_color_hover = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="AI_activator"]
+margin_left = 555.868
+margin_top = 16.9151
+margin_right = 776.868
+margin_bottom = 95.9151
+custom_fonts/font = SubResource( 2 )
+text = "(Enemies can see you 
+and can even  climb through walls to catch you)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sound_volume" type="Label" parent="."]
+margin_left = 56.1203
+margin_top = 320.156
+margin_right = 454.12
+margin_bottom = 440.156
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.847059, 0.796078, 0.796078, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+text = "Sound Volume"
+align = 1
+valign = 1
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider" type="HSlider" parent="sound_volume"]
+margin_left = 485.057
+margin_top = 7.79208
+margin_right = 635.057
+margin_bottom = 57.7921
+rect_scale = Vector2( 1.70327, 2.24 )
+size_flags_horizontal = 3
+min_value = -50.0
+max_value = 6.0
+
+[node name="graphic_quality" type="Label" parent="."]
+margin_left = 53.1056
+margin_top = 475.412
+margin_right = 452.106
+margin_bottom = 595.412
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.847059, 0.796078, 0.796078, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+text = "Fullscreen Mode"
+align = 1
+valign = 1
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gles3" type="Label" parent="graphic_quality"]
+margin_left = 521.39
+margin_top = -3.19397
+margin_right = 736.39
+margin_bottom = 117.806
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.945098, 0.913725, 0.913725, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 4
+text = "On"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="graphic_quality/gles3"]
+margin_left = 250.4
+margin_top = 38.1106
+margin_right = 290.4
+margin_bottom = 78.1106
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="graphic_quality/gles3/ColorRect"]
+margin_left = -5.5329
+margin_top = -3.06372
+margin_right = 18.4671
+margin_bottom = 20.9363
+rect_scale = Vector2( 2.08, 2.00326 )
+custom_colors/font_color_hover_pressed = Color( 0.819608, 0.776471, 0.776471, 1 )
+custom_colors/font_color = Color( 0.929412, 0.854902, 0.854902, 1 )
+custom_colors/font_color_hover = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="graphic_quality/gles3"]
+margin_left = 15.9675
+margin_top = 87.5471
+margin_right = 236.968
+margin_bottom = 166.547
+custom_fonts/font = SubResource( 2 )
+text = "(Recommended for best
+experience) "
+
+[node name="gles2" type="Label" parent="graphic_quality"]
+margin_left = 880.836
+margin_top = -4.26645
+margin_right = 1095.84
+margin_bottom = 116.734
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.945098, 0.913725, 0.913725, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 4
+text = "Off"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="graphic_quality/gles2"]
+margin_left = 259.125
+margin_top = 40.9411
+margin_right = 299.125
+margin_bottom = 80.9411
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="graphic_quality/gles2/ColorRect2"]
+margin_left = -5.5329
+margin_top = -3.06372
+margin_right = 18.4671
+margin_bottom = 20.9363
+rect_scale = Vector2( 2.08, 2.00326 )
+custom_colors/font_color_hover_pressed = Color( 0.819608, 0.776471, 0.776471, 1 )
+custom_colors/font_color = Color( 0.929412, 0.854902, 0.854902, 1 )
+custom_colors/font_color_hover = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="graphic_quality/gles2"]
+margin_left = -2.81915
+margin_top = 85.6049
+margin_right = 218.181
+margin_bottom = 164.605
+custom_fonts/font = SubResource( 2 )
+text = "(For Optimising performance) "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back_button" type="Button" parent="."]
+margin_left = 1159.14
+margin_top = 666.256
+margin_right = 1245.14
+margin_bottom = 724.256
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.882353, 0.792157, 0.792157, 1 )
+custom_colors/font_color_hover = Color( 0.764706, 0.168627, 0.168627, 1 )
+custom_colors/font_color_pressed = Color( 0.92549, 0.862745, 0.862745, 1 )
+text = "Back"
+flat = true
+script = ExtResource( 6 )
+[connection signal="value_changed" from="music_volume/HSlider" to="music_volume" method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="AI_activator/ColorRect/CheckBox" to="AI_activator" method="_on_CheckBox_pressed"]
+[connection signal="value_changed" from="sound_volume/HSlider" to="sound_volume" method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="graphic_quality/gles3/ColorRect/CheckBox" to="graphic_quality" method="_on_gles3_CheckBox_pressed"]
+[connection signal="pressed" from="graphic_quality/gles2/ColorRect2/CheckBox" to="graphic_quality" method="_on_gles2_CheckBox_pressed"]
+[connection signal="pressed" from="Back_button" to="Back_button" method="_on_Back_button_pressed"]

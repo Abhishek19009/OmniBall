@@ -1,0 +1,218 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://fonts/IndieFlower-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/Controls_and_about.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0.156863, 0.113725, 0.113725, 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ControlHeading" type="Label" parent="."]
+margin_left = 439.65
+margin_top = 1.60014
+margin_right = 899.65
+margin_bottom = 110.6
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.972549, 0.945098, 0.945098, 1 )
+custom_constants/shadow_offset_x = 3
+text = "Controls"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ControlHeading"]
+margin_left = -5.25018
+margin_top = 69.0499
+margin_right = 454.75
+margin_bottom = 158.05
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.972549, 0.945098, 0.945098, 1 )
+custom_constants/shadow_offset_x = 3
+text = "--------------------"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="navigation" type="Label" parent="ControlHeading"]
+margin_left = -358.311
+margin_top = 174.091
+margin_right = -138.311
+margin_bottom = 267.091
+custom_fonts/font = SubResource( 2 )
+text = "W-A-S-D / 
+Up-down-left-right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ControlHeading/navigation"]
+margin_left = 497.63
+margin_top = 15.4543
+margin_right = 537.63
+margin_bottom = 29.4543
+custom_fonts/font = SubResource( 3 )
+text = "--   To navigate"
+
+[node name="navigation2" type="Label" parent="ControlHeading"]
+margin_left = -358.311
+margin_top = 282.272
+margin_right = -121.311
+margin_bottom = 375.272
+custom_fonts/font = SubResource( 2 )
+text = "Shift + W-A-S-D / 
+Up-down-left-right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ControlHeading/navigation2"]
+margin_left = 497.63
+margin_top = 15.4543
+margin_right = 537.63
+margin_bottom = 29.4543
+custom_fonts/font = SubResource( 3 )
+text = "--   To Sprint"
+
+[node name="navigation3" type="Label" parent="ControlHeading"]
+margin_left = -358.311
+margin_top = 390.452
+margin_right = -121.311
+margin_bottom = 483.452
+custom_fonts/font = SubResource( 2 )
+text = "Escape key (Esc)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ControlHeading/navigation3"]
+margin_left = 497.63
+margin_top = 15.4543
+margin_right = 537.63
+margin_bottom = 29.4543
+custom_fonts/font = SubResource( 3 )
+text = "--   Opens escape menu"
+
+[node name="navigation4" type="Label" parent="ControlHeading"]
+margin_left = -358.311
+margin_top = 466.323
+margin_right = -121.311
+margin_bottom = 559.323
+custom_fonts/font = SubResource( 2 )
+text = "Mouse Movement
+& Scroll_Wheel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ControlHeading/navigation4"]
+margin_left = 497.63
+margin_top = 15.4543
+margin_right = 537.63
+margin_bottom = 29.4543
+custom_fonts/font = SubResource( 3 )
+text = "--   Rotate camera horizontally , Zoom in and out"
+
+[node name="About" type="Label" parent="."]
+margin_left = 437.0
+margin_top = 536.907
+margin_right = 897.0
+margin_bottom = 645.907
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.972549, 0.945098, 0.945098, 1 )
+custom_constants/shadow_offset_x = 3
+text = "About"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="About"]
+margin_left = -5.25018
+margin_top = 69.0499
+margin_right = 454.75
+margin_bottom = 158.05
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.972549, 0.945098, 0.945098, 1 )
+custom_constants/shadow_offset_x = 3
+text = "--------------------"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="About"]
+margin_left = -361.862
+margin_top = 138.199
+margin_right = -5.86234
+margin_bottom = 183.199
+custom_fonts/font = SubResource( 4 )
+text = "DESIGNER AND DEVELOPER"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="About/Label"]
+margin_left = 385.115
+margin_top = -0.463318
+margin_right = 580.115
+margin_bottom = 44.5367
+custom_fonts/font = SubResource( 3 )
+text = "--   A . K"
+
+[node name="Label3" type="Label" parent="About"]
+margin_left = 170.303
+margin_top = 135.109
+margin_right = 821.303
+margin_bottom = 180.109
+custom_fonts/font = SubResource( 4 )
+text = "(Discover more at  https://akgames.herokuapp.com/)"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1120.47
+margin_top = 34.1288
+margin_right = 1236.47
+margin_bottom = 114.129
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.968627, 0.733333, 0.733333, 1 )
+custom_colors/font_color_hover = Color( 0.886275, 0.203922, 0.203922, 1 )
+text = "Back"
+flat = true
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

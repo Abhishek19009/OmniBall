@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://textures/GroundSnowPitted003_NRM_3K.jpg" type="Texture" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+normal_enabled = true
+normal_scale = -2.78
+normal_texture = ExtResource( 1 )
+
+[sub_resource type="CubeMesh" id=2]
+material = SubResource( 1 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.75, 0.75, 0.75 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.235294, 0.494118, 0.52549, 1 )
+normal_enabled = true
+normal_scale = -2.78
+normal_texture = ExtResource( 1 )
+
+[sub_resource type="CubeMesh" id=5]
+material = SubResource( 4 )
+size = Vector3( 1.5, 1.5, 1.5 )
+
+[node name="wallblocks" type="Spatial"]
+
+[node name="wallblock1" type="MeshInstance" parent="."]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="wallblock1"]
+
+[node name="CollisionShape" type="CollisionShape" parent="wallblock1/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="levelblock" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.52846, 0, 0 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="levelblock"]
+
+[node name="CollisionShape" type="CollisionShape" parent="levelblock/StaticBody"]
+shape = SubResource( 3 )

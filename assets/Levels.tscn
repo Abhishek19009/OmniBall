@@ -1,0 +1,432 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://icons/introtexture.jpg" type="Texture" id=1]
+[ext_resource path="res://fonts/IndieFlower-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/TextureButton.gd" type="Script" id=3]
+[ext_resource path="res://scripts/Stage_Levels.gd" type="Script" id=4]
+[ext_resource path="res://icons/level1.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="AnimatedTexture" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 80
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="Stage_levels" type="Control"]
+margin_right = 1280.0
+margin_bottom = 720.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 83.2172 ],
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_scale = Vector2( 1.04, 1 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="TextureRect"]
+margin_left = 133.285
+margin_top = 133.285
+margin_right = 1213.29
+margin_bottom = 813.286
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level1" type="Control" parent="TextureRect/Control"]
+margin_left = -12.5876
+margin_top = -12.5877
+margin_right = 257.412
+margin_bottom = 227.412
+rect_scale = Vector2( 0.761138, 0.696425 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level1_button" type="TextureButton" parent="TextureRect/Control/Level1"]
+margin_left = -0.000350952
+margin_top = -0.000320435
+margin_right = 270.0
+margin_bottom = 240.0
+texture_normal = ExtResource( 5 )
+expand = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureRect/Control/Level1"]
+margin_left = 129.852
+margin_top = 233.203
+margin_right = 169.852
+margin_bottom = 322.203
+custom_fonts/font = SubResource( 1 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2" type="Control" parent="TextureRect/Control"]
+margin_left = 270.25
+margin_top = -12.5877
+margin_right = 540.25
+margin_bottom = 227.412
+rect_scale = Vector2( 0.761138, 0.696425 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2_button" type="TextureButton" parent="TextureRect/Control/Level2"]
+margin_left = -0.000350952
+margin_top = -0.000320435
+margin_right = 270.0
+margin_bottom = 240.0
+texture_normal = SubResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureRect/Control/Level2"]
+margin_left = 132.313
+margin_top = 233.203
+margin_right = 172.313
+margin_bottom = 322.203
+custom_fonts/font = SubResource( 1 )
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ComingSoon" type="Label" parent="TextureRect/Control/Level2"]
+margin_left = 39.3746
+margin_top = 27.9717
+margin_right = 219.375
+margin_bottom = 178.972
+custom_fonts/font = SubResource( 3 )
+text = "Coming 
+  Soon...."
+align = 1
+valign = 1
+
+[node name="Level3" type="Control" parent="TextureRect/Control"]
+margin_left = 556.833
+margin_top = -12.5877
+margin_right = 826.833
+margin_bottom = 227.412
+rect_scale = Vector2( 0.761138, 0.696425 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2_button" type="TextureButton" parent="TextureRect/Control/Level3"]
+margin_left = -0.000350952
+margin_top = -0.000320435
+margin_right = 270.0
+margin_bottom = 240.0
+texture_normal = SubResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureRect/Control/Level3"]
+margin_left = 129.852
+margin_top = 233.203
+margin_right = 169.852
+margin_bottom = 322.203
+custom_fonts/font = SubResource( 1 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ComingSoon" type="Label" parent="TextureRect/Control/Level3"]
+margin_left = 39.3746
+margin_top = 27.9717
+margin_right = 219.375
+margin_bottom = 178.972
+custom_fonts/font = SubResource( 3 )
+text = "Coming 
+  Soon...."
+align = 1
+valign = 1
+
+[node name="Level4" type="Control" parent="TextureRect/Control"]
+margin_left = 828.432
+margin_top = -8.69167
+margin_right = 1098.43
+margin_bottom = 231.308
+rect_scale = Vector2( 0.761138, 0.696425 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2_button" type="TextureButton" parent="TextureRect/Control/Level4"]
+margin_left = -0.000350952
+margin_top = -0.000320435
+margin_right = 270.0
+margin_bottom = 240.0
+texture_normal = SubResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureRect/Control/Level4"]
+margin_left = 129.852
+margin_top = 233.203
+margin_right = 169.852
+margin_bottom = 322.203
+custom_fonts/font = SubResource( 1 )
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ComingSoon" type="Label" parent="TextureRect/Control/Level4"]
+margin_left = 39.3746
+margin_top = 27.9717
+margin_right = 219.375
+margin_bottom = 178.972
+custom_fonts/font = SubResource( 3 )
+text = "Coming 
+  Soon...."
+align = 1
+valign = 1
+
+[node name="Level5" type="Control" parent="TextureRect/Control"]
+margin_left = -6.96832
+margin_top = 279.615
+margin_right = 263.032
+margin_bottom = 519.615
+rect_scale = Vector2( 0.761138, 0.696425 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2_button" type="TextureButton" parent="TextureRect/Control/Level5"]
+margin_left = -0.000350952
+margin_top = -0.000320435
+margin_right = 270.0
+margin_bottom = 240.0
+texture_normal = SubResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureRect/Control/Level5"]
+margin_left = 129.852
+margin_top = 233.203
+margin_right = 169.852
+margin_bottom = 322.203
+custom_fonts/font = SubResource( 1 )
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ComingSoon" type="Label" parent="TextureRect/Control/Level5"]
+margin_left = 39.3746
+margin_top = 27.9717
+margin_right = 219.375
+margin_bottom = 178.972
+custom_fonts/font = SubResource( 3 )
+text = "Coming 
+  Soon...."
+align = 1
+valign = 1
+
+[node name="Level6" type="Control" parent="TextureRect/Control"]
+margin_left = 279.615
+margin_top = 273.771
+margin_right = 549.615
+margin_bottom = 513.771
+rect_scale = Vector2( 0.761138, 0.696425 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2_button" type="TextureButton" parent="TextureRect/Control/Level6"]
+margin_left = -0.000350952
+margin_top = -0.000320435
+margin_right = 270.0
+margin_bottom = 240.0
+texture_normal = SubResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureRect/Control/Level6"]
+margin_left = 129.852
+margin_top = 233.203
+margin_right = 169.852
+margin_bottom = 322.203
+custom_fonts/font = SubResource( 1 )
+text = "6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ComingSoon" type="Label" parent="TextureRect/Control/Level6"]
+margin_left = 39.3746
+margin_top = 27.9717
+margin_right = 219.375
+margin_bottom = 178.972
+custom_fonts/font = SubResource( 3 )
+text = "Coming 
+  Soon...."
+align = 1
+valign = 1
+
+[node name="Level7" type="Control" parent="TextureRect/Control"]
+margin_left = 564.326
+margin_top = 275.719
+margin_right = 834.326
+margin_bottom = 515.719
+rect_scale = Vector2( 0.761138, 0.696425 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2_button" type="TextureButton" parent="TextureRect/Control/Level7"]
+margin_left = -0.000350952
+margin_top = -0.000320435
+margin_right = 270.0
+margin_bottom = 240.0
+texture_normal = SubResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureRect/Control/Level7"]
+margin_left = 129.852
+margin_top = 233.203
+margin_right = 169.852
+margin_bottom = 322.203
+custom_fonts/font = SubResource( 1 )
+text = "7"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ComingSoon" type="Label" parent="TextureRect/Control/Level7"]
+margin_left = 39.3746
+margin_top = 27.9717
+margin_right = 219.375
+margin_bottom = 178.972
+custom_fonts/font = SubResource( 3 )
+text = "Coming 
+  Soon...."
+align = 1
+valign = 1
+
+[node name="Level8" type="Control" parent="TextureRect/Control"]
+margin_left = 834.052
+margin_top = 271.823
+margin_right = 1104.05
+margin_bottom = 511.823
+rect_scale = Vector2( 0.761138, 0.696425 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level2_button" type="TextureButton" parent="TextureRect/Control/Level8"]
+margin_left = -0.000350952
+margin_top = -0.000320435
+margin_right = 270.0
+margin_bottom = 240.0
+texture_normal = SubResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureRect/Control/Level8"]
+margin_left = 129.852
+margin_top = 233.203
+margin_right = 169.852
+margin_bottom = 322.203
+custom_fonts/font = SubResource( 1 )
+text = "8"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ComingSoon" type="Label" parent="TextureRect/Control/Level8"]
+margin_left = 39.3746
+margin_top = 27.9717
+margin_right = 219.375
+margin_bottom = 178.972
+custom_fonts/font = SubResource( 3 )
+text = "Coming 
+  Soon...."
+align = 1
+valign = 1
+
+[node name="stage_levels_title" type="Label" parent="."]
+margin_left = 567.108
+margin_top = 2.65007
+margin_right = 759.108
+margin_bottom = 120.65
+custom_fonts/font = SubResource( 4 )
+text = "Levels"
+align = 1
+valign = 1
+
+[node name="Backbutton" type="Button" parent="."]
+margin_left = 1027.26
+margin_top = 640.375
+margin_right = 1177.26
+margin_bottom = 720.375
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.992157, 0.992157, 0.992157, 1 )
+custom_colors/font_color_hover = Color( 0.941176, 0.0313726, 0.0313726, 1 )
+custom_colors/font_color_pressed = Color( 0.960784, 0.878431, 0.878431, 1 )
+text = "Back"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 114.37
+margin_top = 663.904
+margin_right = 711.37
+margin_bottom = 708.904
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.882353, 0.831373, 0.831373, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "* Collect all 15 coins to win and avoid enemies...."
+align = 1
+valign = 1
+[connection signal="pressed" from="TextureRect/Control/Level1/Level1_button" to="TextureRect/Control/Level1/Level1_button" method="_on_Level1Button_pressed"]
+[connection signal="pressed" from="Backbutton" to="." method="_on_Backbutton_pressed"]

@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://fonts/Branda-yolq.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://icons/gameovertexture2.jpg" type="Texture" id=2]
+[ext_resource path="res://fonts/Freedom-10eM.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scripts/gamevoer_play_again_button.gd" type="Script" id=4]
+[ext_resource path="res://assets/gameoverscene.gd" type="Script" id=5]
+[ext_resource path="res://music/133283__leszek-szary__game-over.ogg" type="AudioStream" id=6]
+[ext_resource path="res://scripts/GameoverquitButton.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 3 )
+
+[node name="gameoverscene" type="Control"]
+margin_left = -27.0
+margin_right = 1383.0
+margin_bottom = 768.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gameovertexture2" type="Sprite" parent="."]
+position = Vector2( 694.567, 343.997 )
+scale = Vector2( 1.04984, 0.953629 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 252.524
+margin_top = 99.8351
+margin_right = 1139.52
+margin_bottom = 253.835
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.266667, 0.92549, 0.647059, 1 )
+text = "Game Over :("
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gameover_play_again_button" type="Button" parent="."]
+margin_left = 517.682
+margin_top = 355.0
+margin_right = 837.682
+margin_bottom = 501.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.831373, 0.745098, 0.835294, 1 )
+custom_colors/font_color_hover = Color( 0.847059, 0.803922, 0.152941, 1 )
+custom_colors/font_color_pressed = Color( 0.737255, 0.203922, 0.811765, 1 )
+text = "menu"
+flat = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+
+[node name="gameover_quit" type="Button" parent="."]
+margin_left = 517.09
+margin_top = 531.665
+margin_right = 832.09
+margin_bottom = 588.665
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.894118, 0.827451, 0.827451, 1 )
+custom_colors/font_color_hover = Color( 0.847059, 0.803922, 0.152941, 1 )
+text = "Quit Game"
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="gameover_play_again_button" to="gameover_play_again_button" method="_on_gameover_play_again_button_pressed"]
+[connection signal="pressed" from="gameover_quit" to="gameover_quit" method="_on_gameover_quit_pressed"]

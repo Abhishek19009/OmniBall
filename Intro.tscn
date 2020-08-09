@@ -1,0 +1,148 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://fonts/Branda-yolq.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/Freedom-10eM.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://icons/introheadingfinal.png" type="Texture" id=3]
+[ext_resource path="res://icons/introtexture.jpg" type="Texture" id=4]
+[ext_resource path="res://scripts/Button_title_play.gd" type="Script" id=5]
+[ext_resource path="res://scripts/Intro.gd" type="Script" id=6]
+[ext_resource path="res://music/338082__garuda1982__acoustic-guitar-melody.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Button_quit.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 200
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+outline_color = Color( 0.239216, 0.180392, 0.180392, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 70
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 70
+font_data = ExtResource( 2 )
+
+[node name="IntroPage" type="Control"]
+anchor_left = 0.003
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.16
+margin_top = 8.0
+margin_right = 77.0
+margin_bottom = 31.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="introtexture" type="Sprite" parent="."]
+position = Vector2( 670.416, 375.573 )
+scale = Vector2( 1.03083, 0.917842 )
+texture = ExtResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_top = 3.09082
+margin_right = 1366.0
+margin_bottom = 771.091
+color = Color( 0.0705882, 0.172549, 0.188235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = -6.4754
+margin_top = -177.55
+margin_right = 1360.52
+margin_bottom = 377.45
+rect_rotation = 1.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0.992157, 0.898039, 1 )
+custom_colors/font_outline_modulate = Color( 0.282353, 0.172549, 0.172549, 1 )
+custom_colors/font_color_shadow = Color( 0.227451, 0.247059, 0.254902, 1 )
+custom_constants/shadow_offset_x = 7
+custom_constants/shadow_offset_y = 0
+custom_constants/shadow_as_outline = 3
+text = "Omni Ball"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_title_play" type="Button" parent="."]
+margin_left = 483.607
+margin_top = 262.806
+margin_right = 815.607
+margin_bottom = 374.806
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.960784, 0.980392, 0.960784, 1 )
+custom_colors/font_color_hover = Color( 0.945098, 0.305882, 0.172549, 1 )
+custom_colors/font_color_pressed = Color( 0.768627, 0.25098, 0.870588, 1 )
+text = "Levels"
+flat = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="introheadingfinal" type="Sprite" parent="."]
+visible = false
+position = Vector2( 706.804, 211.686 )
+texture = ExtResource( 3 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="Button_options" type="Button" parent="."]
+margin_left = 434.035
+margin_top = 401.803
+margin_right = 795.035
+margin_bottom = 487.803
+rect_rotation = 179.867
+rect_scale = Vector2( -1.16564, -0.881522 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.839216, 0.752941, 0.752941, 1 )
+custom_colors/font_color_hover = Color( 0.945098, 0.305882, 0.172549, 1 )
+text = "OPTIONS"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_quit" type="Button" parent="."]
+margin_left = 482.462
+margin_top = 617.183
+margin_right = 842.462
+margin_bottom = 703.183
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.839216, 0.752941, 0.752941, 1 )
+custom_colors/font_color_hover = Color( 0.945098, 0.305882, 0.172549, 1 )
+text = "QUIT"
+flat = true
+script = ExtResource( 8 )
+
+[node name="Button_controls" type="Button" parent="."]
+margin_left = 435.097
+margin_top = 507.575
+margin_right = 873.097
+margin_bottom = 593.575
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.968627, 0.913725, 0.913725, 1 )
+custom_colors/font_color_hover = Color( 0.945098, 0.305882, 0.172549, 1 )
+text = "Controls"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button_title_play" to="Button_title_play" method="_on_Button_title_play_pressed"]
+[connection signal="pressed" from="Button_options" to="." method="_on_Button_options_pressed"]
+[connection signal="pressed" from="Button_quit" to="Button_quit" method="_on_Button_quit_pressed"]
+[connection signal="pressed" from="Button_controls" to="." method="_on_Button_controls_pressed"]
